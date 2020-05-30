@@ -142,7 +142,13 @@ end
 
 # knows the shoe size of each player (FAILED - 2)
 def shoe_size
-
+  game_hash.each do |k, team|
+    team[:players].each do |e|
+      if e[:player_name] == player
+        return e[:shoe]
+      end
+    end
+  end
 end
 
 # knows the Brooklyn Nets colors are Black and White (FAILED - 3)
