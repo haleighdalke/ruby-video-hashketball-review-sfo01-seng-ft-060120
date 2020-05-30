@@ -242,7 +242,6 @@ end
 
 # Which player has the longest name?
 def player_with_longest_name
-  game_hash = game_hash()
   longest_name = ""
   game_hash.each do |k, team|
     team[:players].each do |e|
