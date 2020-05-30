@@ -159,7 +159,6 @@ def team_colors(user_team_name)
       return team[:colors]
     end
   end
-
 end
 
 # returns the team names (FAILED - 5)
