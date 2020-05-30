@@ -128,3 +128,39 @@ def game_hash
 end
 
 # Write code here
+
+# knows the number of points scored by each player (FAILED - 1)
+def num_points_scored
+
+end
+
+# knows the shoe size of each player (FAILED - 2)
+def shoe_size
+
+end
+
+# knows the Brooklyn Nets colors are Black and White (FAILED - 3)
+# knows the Charlotte Hornets colors are Turquoise and Purple (FAILED - 4)
+def team_colors
+
+end
+
+# returns the team names (FAILED - 5)
+def team_names
+
+end
+
+# returns the player jersey numbers (FAILED - 6)
+def player_numbers
+
+end
+
+# returns all stats for a given player (FAILED - 7)
+def player_stats
+
+end
+
+# returns the number of rebounds of the player with the biggest shoe size (FAILED - 8)
+def big_shoe_rebounds
+
+end
