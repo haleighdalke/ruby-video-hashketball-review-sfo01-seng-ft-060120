@@ -130,8 +130,14 @@ end
 # Write code here
 
 # knows the number of points scored by each player (FAILED - 1)
-def num_points_scored
-  game_hash
+def num_points_scored(player)
+  game_hash.each do |k, team|
+    team[:players].each do |e|
+      if e[:player_name] == player
+        return e[:points]
+      end
+    end
+  end
 end
 
 # knows the shoe size of each player (FAILED - 2)
