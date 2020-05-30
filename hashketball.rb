@@ -131,7 +131,7 @@ end
 
 # knows the number of points scored by each player (FAILED - 1)
 def num_points_scored
-
+  game_hash
 end
 
 # knows the shoe size of each player (FAILED - 2)
