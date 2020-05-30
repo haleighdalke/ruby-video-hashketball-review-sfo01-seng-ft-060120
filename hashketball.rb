@@ -214,7 +214,6 @@ end
 
 # Which player has the most points?
 def most_points_scored
-  game_hash = game_hash()
   most_points = 0
   player = ""
   game_hash.each do |k, team|
