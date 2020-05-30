@@ -208,3 +208,67 @@ def big_shoe_rebounds
   end
   player_rebounds
 end
+
+
+# ------ BONUS -------
+
+# Which player has the most points?
+def most_points_scored
+  game_hash = game_hash()
+  most_points = 0
+  player = ""
+  game_hash.each do |k, team|
+    team[:players].each do |e|
+      if e[:points] > most_points
+        most_points = e[:points]
+        player = e[:player_name]
+      end
+    end
+  end
+  player
+end
+
+
+# Which team has the most points?
+def winning_team
+  game_hash = game_hash()
+  home_team_points = game_hash[:home][:players].sum { |e| e[:points] }
+  away_team_points = game_hash[:away][:players].sum { |e| e[:points] }
+
+  if home_team_points > away_team_points
+    return game_hash[:home][:team_name]
+  else
+    return game_hash[:away][:team_name]
+  end
+end
+
+# Which player has the longest name?
+def player_with_longest_name
+  game_hash = game_hash()
+  longest_name = ""
+  game_hash.each do |k, team|
+    team[:players].each do |e|
+      if e[:player_name].length > longest_name.length
+        longest_name = e[:player_name]
+      end
+    end
+  end
+  longest_name
+end
+
+def long_name_steals_a_ton?
+  game_hash = game_hash()
+
+  most_steals = 0
+  player_with_most_steals = ""
+  game_hash.each do |k, team|
+    team[:players].each do |e|
+      if e[:steals] > most_steals
+        most_steals = e[:steals]
+        player_with_most_steals = e[:player_name]
+      end
+    end
+  end
+
+  player_with_longest_name() == player_with_most_steals ? true : false
+end
