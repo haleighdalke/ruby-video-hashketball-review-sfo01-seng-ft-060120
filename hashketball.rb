@@ -171,8 +171,16 @@ def team_names
 end
 
 # returns the player jersey numbers (FAILED - 6)
-def player_numbers
-
+def player_numbers(user_team_name)
+  numbers = []
+  game_hash.each do |k, team|
+    if team[:team_name] == user_team_name
+      team[:players].each do |player|
+        numbers.push(player[:number])
+      end
+    end
+  end
+  numbers
 end
 
 # returns all stats for a given player (FAILED - 7)
