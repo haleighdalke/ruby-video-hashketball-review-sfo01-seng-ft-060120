@@ -153,7 +153,12 @@ end
 
 # knows the Brooklyn Nets colors are Black and White (FAILED - 3)
 # knows the Charlotte Hornets colors are Turquoise and Purple (FAILED - 4)
-def team_colors
+def team_colors(user_team_name)
+  game_hash.each do |k, team|
+    if team[:team_name] == user_team_name
+      return team[:colors]
+    end
+  end
 
 end
 
